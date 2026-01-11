@@ -204,6 +204,16 @@ Payload example
 	"completedAt": "2026-01-11T..."
 }
 ```
+```json
+{
+    "taskName": "Send Email Notification",
+    "payload": {
+        "email": "abc@gmail.com",
+        "subject": "Hello"
+    },
+    "priority": "High"
+}
+```
 
 ---
 
