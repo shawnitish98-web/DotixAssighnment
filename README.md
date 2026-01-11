@@ -136,6 +136,36 @@ Tables (SQLite):
 	- `key` TEXT PRIMARY KEY
 	- `value` TEXT
 
+Mermaid ER diagram (GitHub supports Mermaid):
+
+```mermaid
+erDiagram
+    JOBS {
+        INTEGER id PK
+        TEXT taskName
+        TEXT payload
+        TEXT priority
+        TEXT status
+        TEXT createdAt
+        TEXT updatedAt
+        TEXT completedAt
+    }
+    WEBHOOK_LOGS {
+        INTEGER id PK
+        INTEGER jobId FK
+        TEXT url
+        TEXT requestBody
+        INTEGER responseStatus
+        TEXT responseBody
+        TEXT createdAt
+    }
+    SETTINGS {
+        TEXT key PK
+        TEXT value
+    }
+    JOBS ||--o{ WEBHOOK_LOGS : "logs"
+```
+
 ASCII ER (simplified):
 
 ```
